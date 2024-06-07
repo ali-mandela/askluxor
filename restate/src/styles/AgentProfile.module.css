@@ -1,0 +1,100 @@
+.profileContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    @media (max-width:700px) {
+        padding: 30px 0;
+        
+    }
+
+    .divider {
+        border: 2px solid #91B029;
+        width: 90px;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    .title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .imageContainer {
+        margin-bottom: 20px;
+    }
+    
+    .profileImage {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .fileLabel {
+        display: block;
+        margin-top: 10px;
+        color: #054C7D;
+        cursor: pointer;
+    }
+    
+    .fileInput {
+        display: none;
+    }
+    
+    .formGroup {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .input,
+    .textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .textarea {
+        resize: none;
+        height: 100px;
+    }
+    
+    .button {
+        padding: 10px 20px;
+        background-color: #91B029;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+        background-color: #789125;
+    }
+    
+}
+

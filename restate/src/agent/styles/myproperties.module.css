@@ -1,0 +1,9 @@
+
+.properyContainer{
+    padding: 40px 0;
+
+    & h1{
+        text-align: center;
+        
+    }
+}

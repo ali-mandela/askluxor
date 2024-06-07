@@ -1,0 +1,33 @@
+.layoutContainer {
+    padding: 10px 140px;
+    height: 100%;
+}
+
+@media (max-width: 900px) and (min-width: 700px) {
+    .layoutContainer {
+        padding: 10px 60px;
+    }
+}
+
+@media (max-width: 700px) {
+    .layoutContainer {
+        padding: 10px;
+    }
+}
+
+/* CONTAINER */
+
+.container{
+    /* background-color: rgb(149, 149, 149); */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 60px 0; 
+    row-gap: 70px;
+}
+@media (max-width: 700px) {
+    .container {
+        padding: 40px 0;
+        gap: 40px;
+    }
+}

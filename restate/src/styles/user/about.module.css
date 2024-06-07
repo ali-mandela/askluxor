@@ -1,0 +1,47 @@
+.aboutSection{
+    display: flex;
+    padding: 60px 0;
+    justify-content: space-between;
+    gap: 40px;
+
+   
+
+    & div{
+        flex: 6;
+
+        & img{
+            flex: 6;
+            width: 100%;
+        }
+    }
+
+    .dd {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+
+       
+
+        & a{
+            background-color:   #91b029;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color .4s ease-in-out;
+
+            &:hover {
+                background-color: #779122 ; 
+            }
+        }
+
+    }
+}
+
+@media (max-width:900px) {
+    .aboutSection{
+        flex-direction: column;
+    }
+}

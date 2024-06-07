@@ -1,0 +1,128 @@
+.postProperty {
+    padding: 20px 0;
+
+    & h1{
+        font-weight: 300;
+    }
+
+}
+
+.propertyContainer {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width : 700px) {
+
+        flex-direction: column-reverse;
+        gap: 30px;  
+        
+
+        & form {
+
+            & > div:nth-child(4){  
+                display: flex;  
+                flex-direction: column;
+                gap: 20px; 
+                & label {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                } 
+           
+        } 
+        & > div:nth-child(5){  
+            display: flex;  
+            flex-direction: column;
+            gap: 20px; 
+            & label {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            } 
+       
+    } 
+        }
+        
+    }
+
+    & form {
+        
+        & div{
+            margin-top: 10px;
+
+            & input, & textarea{
+                margin-top: 5px;
+                height: 30px;
+                outline: none; 
+                padding: 2px 4px; 
+                font-size: 1rem; 
+            }
+
+            & textarea{
+                height: 100px;
+                width: 100%;
+            }
+
+
+        }
+        & > div:nth-child(4){  
+                display: flex;  
+                gap: 20px; 
+                & label {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                } 
+           
+        } 
+        & div:nth-child(5),div:nth-child(6) {  
+            display: flex;  
+            gap: 20px; 
+            & label {
+                display: flex;
+                gap: 10px; 
+                align-items: flex-end;
+
+                & input {
+                    border: none;
+                    border-bottom: solid 1px grey;
+                }
+            } 
+       
+    } 
+    & button {
+        width: 100%;
+        margin: 20px 0;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+        background-color: #91B029;
+        color: white    ;
+        font-size: 1rem;
+
+    }
+    }
+
+    .imgContainer{
+
+        & img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        & input {
+            width: 100%;
+        }
+        & button {
+            width: 100%;
+        margin: 20px 0;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+        background-color: #91B029;
+        color: white    ;
+        font-size: 1rem;
+        }
+    }
+
+}

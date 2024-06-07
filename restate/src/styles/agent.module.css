@@ -1,0 +1,50 @@
+
+/* Agent Component */
+
+.agentComponent {
+    align-content: center;
+    background-color: transparent;
+    /* border: solid 1px #333; */
+    padding: 20px;
+  
+    .imgContainer {
+      position: relative;
+  
+    
+  
+      & > div {  
+        position: absolute;
+        bottom: 20px;
+        height: 240px;
+        left: -30px;
+        width: 260px;
+        border: solid 8px #91B029;  
+        z-index: -1;  
+      }
+  
+      & img {
+        width: 260px;
+        height: 220px;
+        object-fit: cover;
+        z-index: 1;  
+      }
+    }
+  
+    .textContainer {
+      .name {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+  
+      .list {
+        border-bottom: #7e7e7e solid 1px; 
+ 
+        & a {
+          color: #7e7e7e;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+ 

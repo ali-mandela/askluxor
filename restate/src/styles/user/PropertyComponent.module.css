@@ -1,0 +1,205 @@
+.propertyAgentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+ 
+
+.propertyAgentContainer img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.propertyAgentContainer p {
+    font-size: 16px;
+    color: #666;
+    text-align: start;
+}
+
+.propertyAgentContainer div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+    .propertyAgentContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .propertyAgentContainer div {
+        width: 48%;
+        text-align: left;
+    }
+
+    .propertyAgentContainer img {
+        margin-bottom: 0;
+    }
+}
+
+
+/* PROPERTY AGENT CONTACT FORM */
+
+.PropertyFormContainer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto;
+
+    & h3{
+        margin: 20px 0;
+        font-weight: 300;
+    }
+}
+
+ 
+
+.PropertyFormContainer form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.inputRow {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.inputRow input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.PropertyFormContainer button {
+    padding: 10px 20px;
+    background-color: #a0c231;
+    width: 200px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.PropertyFormContainer button:hover {
+    background-color: #91B029;
+}
+
+@media (min-width: 800px) {
+    .PropertyFormContainer {
+        padding: 30px;
+    }
+
+    .PropertyFormContainer h3 {
+        font-size: 28px;
+    }
+
+    .inputRow input {
+        font-size: 18px;
+    }
+
+    .PropertyFormContainer button {
+        font-size: 18px;
+    }
+}
+
+/* Property Content */
+ 
+
+.propContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto; 
+    line-height: 1.6;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.imgContainer img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body h2 { 
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.features {
+    display: flex;
+    gap: 30px;
+    align-items: center;  
+    margin: 10px 0;
+   
+}
+
+.features > p {
+    display: flex;
+    align-items: center;   
+    font-size: 2rem;
+    gap: 20px;
+}
+
+.features svg { 
+    font-size: 2rem;
+    color: #a0c231;
+}
+
+.body p {
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.type {
+    font-size: 18px;
+    color: #444;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    .type {
+        font-size: 16px;
+    }
+}
+ 

@@ -1,0 +1,180 @@
+.headerContainer {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+    width: 100%;
+    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & h2{
+        & a{
+            color: white;
+        }
+    }
+
+    & > ul{
+        display: flex;
+        gap: 20px;
+
+        & li{
+            cursor: pointer;
+
+            & a{
+                color: #91B029
+            }
+        }
+    }
+    .mobile{
+        display: none;
+    }
+
+    .activeLink{
+        color: #ffffff;
+    }
+}
+
+.bodyContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center; 
+    align-items: center; 
+   
+
+    .bodyContent { 
+        display: flex; 
+        text-align: center; 
+        justify-content: center;
+        flex-direction: column;  
+
+        .title{
+            font-weight: 400;
+            color: #ffffff;
+        }
+        .text{
+            font-size: 1rem;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+        .price{
+            color: #91B029;
+            font-size: 2rem;
+
+        }
+        .header{ 
+            font-weight: 400;
+            margin-top: 40px;
+            color: #ffffff;
+        }
+        .location{ 
+            
+            & svg{
+                color: #91B029;
+            }
+            color: #ffffff;
+        }
+
+        .details{ 
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            
+            & svg{
+                color: #91B029;
+            }
+            color: #ffffff;
+        }
+
+        .button{
+            color: #ffffff;
+            font-weight: 300;
+            border-radius: 4px;
+            height: 40px; 
+            background-color: #91B029;
+            width: 120px;
+            
+            /* Center the button horizontally and vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    
+}
+
+@media (max-width: 700px) {
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        & h2{
+            & a{
+                color: white;
+            }
+        }
+    
+        & > ul{
+            display: none;
+            
+        }
+
+        .mobile{
+            display: block; 
+            position: relative; 
+
+            & svg {
+                font-size: 4rem;
+                z-index: +1111;
+                position: absolute;
+                top: -20px;;
+                right: 10px;
+            }
+
+            .mobileMenu{ 
+                position: absolute;
+                top: -30px; 
+                right: -100px;
+                width: 99vw; 
+                height: 100vh;
+                z-index: +11;
+                background-color: rgb(255, 255, 255);
+                transition: right .3 ease-in-out;
+
+                & ul{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 70px 30px;
+                    gap: 30px;
+
+                    .activeLL { 
+                            color: #91B029;
+                        
+                     }
+
+                    & li {
+                        font-size: 1.5rem; 
+
+                         & a{
+                            color: #000;
+                            
+                         }
+
+                         
+                        
+                    }
+                }
+            }
+        }
+    
+         
+    }
+
+}

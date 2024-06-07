@@ -1,0 +1,103 @@
+.propertyContainer{ 
+    padding: 60px 0;
+
+    .propertyTop{
+        text-align: center;
+        padding: 60px 0;
+
+        & h1{
+            font-weight: 300;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        & p{
+            color: white;
+        }
+    }
+
+    .propertyBody{
+        padding: 30px 0;
+        /* display: flex; 
+        justify-content: space-between;
+        flex-wrap: wrap;   */
+
+    }
+
+}
+@media (max-width: 700px) {
+    .propertyContainer {
+         padding: 40px 0;
+
+         .propertyTop{
+            padding: 10px 0;
+         }
+         .propertyBody{ 
+            /*  */
+            padding: 0 10px;
+        }
+    }
+    
+}
+
+
+ 
+/* PROPERTY COMPONENT */
+
+.PropertyComponent{
+
+    background-color: #222222;
+    width: 320px;
+    display: inline-block;
+    & img {
+        width: 100%;
+        object-fit: cover;
+        height: 260px;
+        transition: 0.2s all ease;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1);
+        }
+    }
+
+    .description {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            color: antiquewhite;
+
+            & p{
+                
+color: aliceblue;
+                & svg {
+                    color: #91B029;
+                }
+            }
+        }
+
+        .price {
+            color: #91B029;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .location {
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+
+            color: aliceblue;
+            & svg {
+                color: #91B029;
+            }
+        }
+    }
+}
