@@ -26,107 +26,39 @@ import {
   NotFoundPage
 } from './utils/Spinner';
 import AboutPage from './pages/user/AboutPage';
-import PropertyPage from './pages/user/PropertyPage';
+import PropertyPage from './pages/user/PropertyPage'; 
 
-Axios.defaults.baseURL = 'http://localhost:8080/api/'
+Axios.defaults.baseURL =import.meta.env.VITE_API_URL;
 
 function App() {
+  return (
+    <>
+      <Routes>
+        {/* Main Layout Routes */}
+        <Route path='/*' element={<NotFoundPage />} />
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/agents" element={<AgentsPage />} />
+          <Route path="/agents/:id" element={<AgentSinglePage />} />
+          <Route path="/property" element={<PropertyPage />} />
+          <Route path="/property/:id" element={<Property />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
 
-  return ( <
-      >
-      <
-      Routes > {
-        /* Main Layout Routes */ } <
-      Route path = '/*'
-      element = {
-        < NotFoundPage / >
-      }
-      /> <
-      Route element = {
-        < MainLayout / >
-      } >
-      <
-      Route path = "/"
-      element = {
-        < HomePage / >
-      }
-      />
+        {/* Agent Layout Routes */}
+        <Route path="/agent" element={<AgentLayout />}>
+          <Route path="login" element={<RoleBasedRedirect><LoginPage /></RoleBasedRedirect>} />
+          <Route path="register" element={<RoleBasedRedirect><RegisterPage /></RoleBasedRedirect>} />
+          <Route path="post-a-property" element={<ProtectedRoute><PostProperty /></ProtectedRoute>} />
+          <Route path="property/:id" element={<ProtectedRoute><SingleProperty /></ProtectedRoute>} />
+          <Route path="my-properties" element={<ProtectedRoute><MyProerties /></ProtectedRoute>} />
+          <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+          <Route path="admin/dashboard" element={<ProtectedRoute><AdminDashBoard /></ProtectedRoute>} />
+        </Route>
+      </Routes>
+    </>
+  );
+}
 
-      <
-      Route path = "/agents"
-      element = {
-        < AgentsPage / >
-      }
-      /> <
-      Route path = "/agents/:id"
-      element = {
-        < AgentSinglePage / >
-      }
-      /> <
-      Route path = "/property"
-      element = {
-        < PropertyPage / >
-      }
-      /> <
-      Route path = "/property/:id"
-      element = {
-        < Property / >
-      }
-      /> <
-      Route path = "/about"
-      element = {
-        < AboutPage / >
-      }
-      /> <
-      Route path = "/contact"
-      element = {
-        < ContactPage / >
-      }
-      />
-
-      <
-      /Route>
-
-      {
-        /* Agent Layout Routes */ } <
-      Route path = "/agent"
-      element = {
-        < AgentLayout / >
-      } >
-      <
-      Route path = "login"
-      element = {
-        < RoleBasedRedirect > < LoginPage / > < /RoleBasedRedirect>} / >
-        <
-        Route path = "register"
-        element = {
-          < RoleBasedRedirect > < RegisterPage / > < /RoleBasedRedirect>} / >
-          <
-          Route path = "post-a-property"
-          element = {
-            < ProtectedRoute > < PostProperty / > < /ProtectedRoute>} / >
-            <
-            Route path = "property/:id"
-            element = {
-              < ProtectedRoute > < SingleProperty / > < /ProtectedRoute>} / >
-              <
-              Route path = "my-properties"
-              element = {
-                < ProtectedRoute > < MyProerties / > < /ProtectedRoute>} / >
-                <
-                Route path = "profile"
-                element = {
-                  < ProtectedRoute > < ProfilePage / > < /ProtectedRoute>} / >
-                  <
-                  Route path = "admin/dashboard"
-                  element = {
-                    < ProtectedRoute > < AdminDashBoard / > < /ProtectedRoute>} / >
-
-                    <
-                    /Route> <
-                    /Routes> <
-                    />
-                  );
-                }
-
-                export default App;
+export default App;

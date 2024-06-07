@@ -95,6 +95,7 @@ const Header = () => {
                     <h2 onClick={()=>{
                         setCurrentLink('Home')
                     }}><Link to='/'>askluxor</Link></h2>
+                    
                     <ul>
                         {links.map(item => (
                             <li
